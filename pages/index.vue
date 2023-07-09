@@ -26,7 +26,7 @@ const createNewWorkspace = () => {
 <h2>Recently viewed</h2>
 <h2>Workspaces</h2>
 
-<input type="text" v-model="newWorkspaceName"/>
+<input type="text" v-model="newWorkspaceName" @keyup.enter="createNewWorkspace"/>
 <button @click="createNewWorkspace">Create a Workspace</button>
 <ul>
     <li v-for="workspace in workspaceList" :key="`workspace+ ${workspace.id}`"> {{ workspace.id }}:  {{ workspace.name }}</li>
